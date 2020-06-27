@@ -29,8 +29,8 @@ def parse_cmd_args():
 
 
 if __name__ == '__main__':
-    cores = parse_command_args().cores
-    mem_eat = "L" * MB * parse_command_args().memory
+    cores = parse_cmd_args().cores
+    mem_eat = "L" * MB * parse_cmd_args().memory
     if cores > cpu_count():
         print("Too many threads running! You are only able to run"
               f" {cpu_count()} threads at a time!")
